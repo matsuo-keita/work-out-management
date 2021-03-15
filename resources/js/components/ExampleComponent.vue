@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center bg-white">
+        <div class="row justify-content-center bg-primary">
             <div class="col-12">
                 <table>
                     <thead>

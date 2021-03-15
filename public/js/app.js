@@ -1933,7 +1933,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      weights: [{
+        text: '1.25',
+        value: '1'
+      }, {
+        text: '2.5',
+        value: '2'
+      }, {
+        text: '3.75',
+        value: '3'
+      }, {
+        text: '5',
+        value: '4'
+      }, {
+        text: '6.25',
+        value: '5'
+      }, {
+        text: '7.5',
+        value: '6'
+      }, {
+        text: '8.75',
+        value: '7'
+      }, {
+        text: '10',
+        value: '8'
+      }]
+    };
+  },
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -37920,7 +37950,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center bg-white" }, [
+    _c("div", { staticClass: "row justify-content-center bg-primary" }, [
       _c("div", { staticClass: "col-12" }, [
         _c("table", [
           _vm._m(0),
@@ -38005,45 +38035,61 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center " }, [
+      _c("div", { staticClass: "col-12" }, [
+        _c("button", { staticClass: "btn-blue" }, [_vm._v("スクワット")]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn-blue" }, [_vm._v("ベンチプレス")]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn-blue" }, [_vm._v("デッドリフト")]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn-blue" }, [_vm._v("ラットプルダウン")]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn-blue" }, [_vm._v("アブローラー")]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn-blue" }, [_vm._v("サイドレイズ")]),
+        _vm._v(" "),
+        _c("form", [
+          _c("div", [
+            _c(
+              "select",
+              { attrs: { name: "weight" } },
+              [
+                _c("option", { attrs: { value: "" } }, [
+                  _vm._v("--選択してください--")
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.weights, function(weight) {
+                  return _c("option", { domProps: { value: weight.value } }, [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(weight.text) +
+                        "\n                        "
+                    )
+                  ])
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center bg-white" }, [
-        _c("div", { staticClass: "col-12" }, [
-          _c("button", [_vm._v("スクワット")]),
-          _vm._v(" "),
-          _c("button", [_vm._v("ベンチプレス")]),
-          _vm._v(" "),
-          _c("button", [_vm._v("デッドリフト")]),
-          _vm._v(" "),
-          _c("button", [_vm._v("ラットプルダウン")]),
-          _vm._v(" "),
-          _c("button", [_vm._v("アブローラー")]),
-          _vm._v(" "),
-          _c("button", [_vm._v("サイドレイズ")]),
-          _vm._v(" "),
-          _c("form", [
-            _c("div", [
-              _c("select", { attrs: { name: "weight" } }, [
-                _c("option", { attrs: { value: "1" } }, [_vm._v("1.25")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "2" } }, [_vm._v("2.5")]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "3" } }, [_vm._v("3.75")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              _c("input", { attrs: { type: "button", value: "登録" } })
-            ])
-          ])
-        ])
-      ])
+    return _c("div", [
+      _c("input", {
+        staticClass: "btn-blue",
+        attrs: { type: "button", value: "登録" }
+      })
     ])
   }
 ]

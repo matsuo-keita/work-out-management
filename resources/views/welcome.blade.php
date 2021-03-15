@@ -25,7 +25,7 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen dark:bg-gray-800 sm:items-center sm:pt-0">
+        <div class="relative flex items-top justify-center min-h-screen bg-red-200 sm:items-center sm:pt-0">
             <div id="app">
                 <input-component></input-component>
             </div>
