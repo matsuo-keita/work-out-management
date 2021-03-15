@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>VuePractice</title>
+        <title>筋トレ管理アプリ</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen dark:bg-gray-800 sm:items-center sm:pt-0">
             <div id="app">
-                <example-component v-bind:ary-items='@json($aryData)'></example-component>
+                <input-component></input-component>
             </div>
         </div>
     </body>
