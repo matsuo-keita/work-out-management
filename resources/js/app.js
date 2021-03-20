@@ -7,6 +7,7 @@ import VueRouter from 'vue-router';
 import HeaderComponent from "./components/HeaderComponent";
 import CalendarComponent from "./components/CalendarComponent";
 import RegisterComponent from "./components/RegisterComponent";
+import FooterComponent from "./components/FooterComponent";
 
 require('./bootstrap');
 
@@ -26,6 +27,7 @@ window.Vue = require('vue').default;
 Vue.component('register-component', RegisterComponent);
 Vue.component('header-component', HeaderComponent);
 Vue.component('calendar-component', CalendarComponent);
+Vue.component('footer-component', FooterComponent);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
