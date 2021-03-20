@@ -3,6 +3,10 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import VueRouter from 'vue-router';
+import HeaderComponent from "./components/HeaderComponent";
+import CalendarComponent from "./components/CalendarComponent";
+import RegisterComponent from "./components/RegisterComponent";
 
 require('./bootstrap');
 
@@ -19,15 +23,33 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('input-component', require('./components/InputComponent.vue').default);
-
+Vue.component('register-component', RegisterComponent);
+Vue.component('header-component', HeaderComponent);
+Vue.component('calendar-component', CalendarComponent);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/register',
+            name: 'workout.register',
+            component: RegisterComponent
+        },
+        {
+            path: '/calendar',
+            name: 'workout.calendar',
+            component: CalendarComponent
+        },
+    ]
+});
 
 const app = new Vue({
     el: '#app',
+    router
 });

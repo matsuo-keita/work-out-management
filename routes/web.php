@@ -14,8 +14,9 @@ use App\Http\Controllers\WelcomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [WelcomeController::class, "index"]);
+Route::get('/{any}', function() {
+    return view('welcome');
+})->where('any', '.*');
 
 Auth::routes();
 
